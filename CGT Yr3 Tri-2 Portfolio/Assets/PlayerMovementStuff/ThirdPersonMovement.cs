@@ -32,6 +32,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public Animator movementAnim;
 
+    public ParticleSystem SpeedTrail;
+
     public float count;
 
     public bool disableMovement;
@@ -100,7 +102,18 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             Idle();
         }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            SpeedTrail.Play();
+        }
+        else if (Input.GetKeyUp(KeyCode.W))
+        {
+            SpeedTrail.Stop();
+        }
     }
+
+
 
     private void Ragdoll()
     {
