@@ -30,6 +30,8 @@ public class ThirdPersonMovement : MonoBehaviour
     public float groundDistance = 0.3f;
     public LayerMask groundMask;
 
+    Vector3 StartPos;
+
     public Animator movementAnim;
 
     public ParticleSystem SpeedTrail;
@@ -52,13 +54,6 @@ public class ThirdPersonMovement : MonoBehaviour
         Cursor.visible = false;
     }
 
-    void OnTriggerEnter(Collider collider)
-    {
-        if(collider.gameObject.tag == "Death")
-        {
-            print("RESET!!!!");
-        }
-    }
 
     // Update is called once per frame
     void Update()
