@@ -46,9 +46,18 @@ public class ThirdPersonMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         movementAnim = GetComponentInChildren<Animator>();
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if(collider.gameObject.tag == "Death")
+        {
+            print("RESET!!!!");
+        }
     }
 
     // Update is called once per frame
