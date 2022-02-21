@@ -65,6 +65,7 @@ public class ThirdPersonMovement : MonoBehaviour
             Run();
             Gravity();
             Jump();
+            Slide();
         }
 
         Ragdoll();
@@ -107,13 +108,21 @@ public class ThirdPersonMovement : MonoBehaviour
             Idle();
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             SpeedTrail.Play();
         }
-        else if (Input.GetKeyUp(KeyCode.W))
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             SpeedTrail.Stop();
+        }
+    }
+
+    void Slide()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            movementAnim.SetTrigger("Slide");
         }
     }
 
