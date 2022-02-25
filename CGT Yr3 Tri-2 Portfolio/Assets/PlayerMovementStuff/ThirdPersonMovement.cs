@@ -14,8 +14,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float walkSpeed = 5f;
     public float sprintSpeed = 7f;
 
-    public float slopeForce;
-    public float slopeForceRayLength;
+    public float SlideSpeed = 30f;
 
     //jump height
     public float jumpHeight = 3f;
@@ -90,9 +89,6 @@ public class ThirdPersonMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        if ((vertical != 0 || horizontal != 0) && OnSlope())
-            controller.Move(Vector3.down * controller.height / 2 * slopeForce * Time.deltaTime);
-
         if (direction.magnitude >= 0.1f)
         {
             //Calculation for turning /direction angles
@@ -124,20 +120,10 @@ public class ThirdPersonMovement : MonoBehaviour
         }
     }
 
-    private bool OnSlope()
-    {
-
-        RaycastHit hit;
-
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, controller.height / 2 * slopeForceRayLength))
-            if (hit.normal != Vector3.up)
-                return true;
-        return false;
-    }
 
     void Slide()
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt) && Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.LeftAlt))
         {
             movementAnim.SetTrigger("Slide");
         }
@@ -186,7 +172,6 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             speed = walkSpeed;
             Idle();
-
         }
     }
 
