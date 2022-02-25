@@ -14,6 +14,9 @@ public class ThirdPersonMovement : MonoBehaviour
     public float walkSpeed = 5f;
     public float sprintSpeed = 7f;
 
+    public float slopeForce;
+    public float slopeForceRayLength;
+
     //jump height
     public float jumpHeight = 3f;
     //smooth turn value
@@ -48,7 +51,7 @@ public class ThirdPersonMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
         movementAnim = GetComponentInChildren<Animator>();
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
@@ -87,6 +90,9 @@ public class ThirdPersonMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
+        if ((vertical != 0 || horizontal != 0) && OnSlope())
+            controller.Move(Vector3.down * controller.height / 2 * slopeForce * Time.deltaTime);
+
         if (direction.magnitude >= 0.1f)
         {
             //Calculation for turning /direction angles
@@ -108,7 +114,7 @@ public class ThirdPersonMovement : MonoBehaviour
             Idle();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
         {
             SpeedTrail.Play();
         }
@@ -118,9 +124,20 @@ public class ThirdPersonMovement : MonoBehaviour
         }
     }
 
+    private bool OnSlope()
+    {
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, controller.height / 2 * slopeForceRayLength))
+            if (hit.normal != Vector3.up)
+                return true;
+        return false;
+    }
+
     void Slide()
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        if (Input.GetKeyDown(KeyCode.LeftAlt) && Input.GetKey(KeyCode.W))
         {
             movementAnim.SetTrigger("Slide");
         }
