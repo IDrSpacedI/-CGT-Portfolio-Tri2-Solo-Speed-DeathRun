@@ -8,13 +8,14 @@ public class ThirdPersonMovement : MonoBehaviour
     public CharacterController controller;
     //refence to the camera
     public Transform cam;
+
     //movemebt speed
     public float speed = 5f;
 
     public float walkSpeed = 5f;
     public float sprintSpeed = 7f;
 
-    public float SlideSpeed = 30f;
+    public TimeManager timeManager;
 
     //jump height
     public float jumpHeight = 3f;
@@ -144,17 +145,25 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void Ragdoll()
     {
+        //if (Input.GetKey(KeyCode.E))
+        //{
+        //    movementAnim.enabled = false;
+        //    disableMovement = true;
+        //}
+
+        //if (Input.GetKey(KeyCode.Q))
+        //{
+        //    movementAnim.enabled = true;
+        //    disableMovement = false;
+        //}
+
         if (Input.GetKey(KeyCode.E))
         {
-            movementAnim.enabled = false;
-            disableMovement = true;
+            timeManager.DoSlowMotion();
         }
 
-        if (Input.GetKey(KeyCode.Q))
-        {
-            movementAnim.enabled = true;
-            disableMovement = false;
-        }
+
+
     }
 
     private void Run()
