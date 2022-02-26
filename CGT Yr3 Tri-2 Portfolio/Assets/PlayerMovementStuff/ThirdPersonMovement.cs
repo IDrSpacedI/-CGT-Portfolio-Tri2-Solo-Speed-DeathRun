@@ -121,11 +121,11 @@ public class ThirdPersonMovement : MonoBehaviour
         }
     }
 
-    //Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && 
+    
 
     void Slide()
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.LeftAlt))
         {
             movementAnim.SetTrigger("Slide");
             controller.height = 1f;
