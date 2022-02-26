@@ -120,13 +120,24 @@ public class ThirdPersonMovement : MonoBehaviour
         }
     }
 
+    //Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && 
 
     void Slide()
     {
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.LeftAlt))
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             movementAnim.SetTrigger("Slide");
+            controller.height = 1f;
+            controller.center = new Vector3(0, (float)-0.44, 0);
+            StartCoroutine(heightajustment());
         }
+    }
+
+    IEnumerator heightajustment()
+    {
+        yield return new WaitForSeconds(1f);
+        controller.height = 1.7f;
+        controller.center = new Vector3(0, (float)-0.07, 0);
     }
 
 
