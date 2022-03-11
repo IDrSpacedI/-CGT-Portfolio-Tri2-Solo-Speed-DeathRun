@@ -13,15 +13,40 @@ public class ResetPlayer : MonoBehaviour
         {
             thePlayer.transform.position = TeleportTarget.transform.position;
         }
+
+
     }
 
 
     void OnTriggerEnter(Collider other)
     {
-        //print("RESET");
-        //print(TeleportTarget.transform.position);
+        print("RESET");
+        print(TeleportTarget.transform.position);
 
         thePlayer.transform.position = TeleportTarget.transform.position;
-        thePlayer.transform.position = TeleportTarget.transform.position;
+
+        if (thePlayer.transform.position == TeleportTarget.transform.position)
+        {
+            //no reset
+        }
+        else
+        {
+            thePlayer.transform.position = TeleportTarget.transform.position;
+            //reset again
+        }
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (thePlayer.transform.position == TeleportTarget.transform.position)
+        {
+            //no reset
+        }
+        else
+        {
+            thePlayer.transform.position = TeleportTarget.transform.position;
+            //reset again
+        }
     }
 }

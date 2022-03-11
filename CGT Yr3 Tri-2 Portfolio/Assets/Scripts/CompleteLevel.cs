@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CompleteLevel : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        Time.timeScale = 0f;
-        Debug.Log("Next Level");
-
+        SceneManager.LoadScene("Level 2");
     }
 
 }
