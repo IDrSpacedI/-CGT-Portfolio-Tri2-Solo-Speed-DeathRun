@@ -25,6 +25,7 @@ public class CountDowwnTimer : MonoBehaviour
         if(currentTime <= 0)
         {
             currentTime = 0;
+
         }
     }
 }
