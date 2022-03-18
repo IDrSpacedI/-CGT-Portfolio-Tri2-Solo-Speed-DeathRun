@@ -850,7 +850,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8702214, y: 1}
+    m_SensorSize: {x: 2.1101022, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10805,7 +10805,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905921853}
-  m_LocalRotation: {x: 0.09902824, y: 0.000000017290729, z: -0.0000000016870723, w: 0.99508464}
+  m_LocalRotation: {x: 0.09902824, y: -0.000000017290729, z: 0.0000000016870492, w: 0.99508464}
   m_LocalPosition: {x: 10.11, y: 2.076, z: 7.3760004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -13502,7 +13502,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8702214, y: 1}
+    m_SensorSize: {x: 2.1101022, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -13904,7 +13904,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8702214, y: 1}
+    m_SensorSize: {x: 2.1101022, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -13920,7 +13920,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423030883}
-  m_LocalRotation: {x: 0.09902824, y: 0.000000017121806, z: -0.0000000017039177, w: 0.99508464}
+  m_LocalRotation: {x: 0.09902824, y: -0.000000017121806, z: 0.0000000017039177, w: 0.99508464}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14953,7 +14953,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Falling or Dying will result in being reset back to the start!
+  m_text: Falling or Dying to the void will result in being reset back to the start!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24952,7 +24952,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8702214, y: 1}
+    m_SensorSize: {x: 2.1101022, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
