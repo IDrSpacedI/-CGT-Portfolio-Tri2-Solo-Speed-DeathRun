@@ -127,10 +127,14 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.LeftAlt))
         {
-            movementAnim.SetTrigger("Slide");
+            movementAnim.SetBool("SlideBool", true);
             controller.height = 1f;
             controller.center = new Vector3(0, (float)-0.44, 0);
             StartCoroutine(heightajustment());
+        }
+        else
+        {
+            movementAnim.SetBool("SlideBool", false);
         }
     }
 
@@ -215,7 +219,11 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            movementAnim.SetTrigger("Jump");
+            movementAnim.SetBool("JumpBool", true);
+        }
+        else
+        {
+            movementAnim.SetBool("JumpBool", false);
         }
     }
 
