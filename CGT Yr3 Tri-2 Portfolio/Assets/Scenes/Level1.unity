@@ -322,6 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TeleportTarget: {fileID: 1040387724}
   thePlayer: {fileID: 1080818274}
+  cc: {fileID: 1576535601}
 --- !u!1 &23416985
 GameObject:
   m_ObjectHideFlags: 0
@@ -10805,7 +10806,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905921853}
-  m_LocalRotation: {x: 0.09902824, y: -0.000000017290729, z: 0.0000000016870492, w: 0.99508464}
+  m_LocalRotation: {x: 0.09902824, y: 0.000000017290729, z: -0.0000000016870492, w: 0.99508464}
   m_LocalPosition: {x: 10.11, y: 2.076, z: 7.3760004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -13518,7 +13519,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269428551}
-  m_LocalRotation: {x: 0.07591991, y: 0.0000000042891806, z: -3.2657674e-10, w: 0.99711394}
+  m_LocalRotation: {x: 0.07591991, y: -0.0000000042891806, z: 3.2657674e-10, w: 0.99711394}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13920,7 +13921,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423030883}
-  m_LocalRotation: {x: 0.09902824, y: -0.000000017121806, z: 0.0000000017039177, w: 0.99508464}
+  m_LocalRotation: {x: 0.09902824, y: 0.000000017121806, z: -0.0000000017039177, w: 0.99508464}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17009,6 +17010,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc3d306c4c5d97c41b07ee0631bf58a5, type: 3}
+--- !u!143 &1576535601 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 2072837913432437360, guid: cc3d306c4c5d97c41b07ee0631bf58a5, type: 3}
+  m_PrefabInstance: {fileID: 1576535600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1581340832 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4776847549978766951, guid: 6d9cacfb8ea31b944a2de9ce5f69c978, type: 3}

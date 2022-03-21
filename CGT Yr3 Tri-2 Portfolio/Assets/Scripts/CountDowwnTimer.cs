@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CountDowwnTimer : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class CountDowwnTimer : MonoBehaviour
         if(currentTime <= 0)
         {
             currentTime = 0;
+            SceneManager.LoadScene("Level 2");
 
         }
     }
