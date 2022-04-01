@@ -8,6 +8,7 @@ public class CountDowwnTimer : MonoBehaviour
 {
     float currentTime = 0f;
     public float startingTime = 100f;
+    public GameObject DeathDHUD;
 
     [SerializeField] TextMeshProUGUI countdownText;
 
@@ -15,6 +16,7 @@ public class CountDowwnTimer : MonoBehaviour
     void Start()
     {
         currentTime = startingTime;
+        DeathDHUD.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,8 +28,7 @@ public class CountDowwnTimer : MonoBehaviour
         if(currentTime <= 0)
         {
             currentTime = 0;
-            SceneManager.LoadScene("Level 2");
-
+            DeathDHUD.SetActive(true);
         }
     }
 }
