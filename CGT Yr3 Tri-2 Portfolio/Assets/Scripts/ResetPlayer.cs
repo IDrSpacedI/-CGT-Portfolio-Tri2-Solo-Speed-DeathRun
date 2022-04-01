@@ -6,6 +6,7 @@ public class ResetPlayer : MonoBehaviour
 {
     public Transform TeleportTarget;
     public GameObject thePlayer;
+    public GameObject Portal;
     public CharacterController cc;
 
     void Update()
@@ -14,8 +15,6 @@ public class ResetPlayer : MonoBehaviour
         {
             thePlayer.transform.position = TeleportTarget.transform.position;
         }
-
-
     }
 
 
@@ -26,8 +25,17 @@ public class ResetPlayer : MonoBehaviour
 
         cc.enabled = false;
         thePlayer.transform.position = TeleportTarget.transform.position;
+        StartCoroutine(portal());
         cc.enabled = true;
-
+        
 
     }
+
+    IEnumerator portal()
+    {
+        Portal.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        Portal.SetActive(false);
+    }
+        
 }

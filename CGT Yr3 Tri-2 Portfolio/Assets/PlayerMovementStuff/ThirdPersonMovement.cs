@@ -129,7 +129,7 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             movementAnim.SetBool("SlideBool", true);
             controller.height = 1f;
-            controller.center = new Vector3(0, (float)-0.44, 0);
+            controller.center = new Vector3(0, (float)0.6, 0);
             StartCoroutine(heightajustment());
         }
         else
@@ -142,7 +142,7 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         controller.height = 1.7f;
-        controller.center = new Vector3(0, (float)-0.07, 0);
+        controller.center = new Vector3(0, (float)0.9, 0);
     }
 
 
