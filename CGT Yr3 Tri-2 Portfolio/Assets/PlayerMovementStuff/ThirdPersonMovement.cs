@@ -114,6 +114,8 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
         {
             SpeedTrail.Play();
+            //FindObjectOfType<AudioManager>().Play("SpeedUp");
+
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
