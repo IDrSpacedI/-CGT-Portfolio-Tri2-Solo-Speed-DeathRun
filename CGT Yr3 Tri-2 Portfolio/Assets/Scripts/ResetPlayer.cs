@@ -25,15 +25,16 @@ public class ResetPlayer : MonoBehaviour
 
         cc.enabled = false;
         thePlayer.transform.position = TeleportTarget.transform.position;
-        FindObjectOfType<AudioManager>().Play("Portal");
         StartCoroutine(portal());
         cc.enabled = true;
-        
+        FindObjectOfType<AudioManager>().Play("Portal");
+
 
     }
 
     IEnumerator portal()
     {
+        //FindObjectOfType<AudioManager>().Play("Portal");
         Portal.SetActive(true);
         yield return new WaitForSeconds(3f);
         Portal.SetActive(false);

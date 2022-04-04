@@ -71,7 +71,7 @@ public class ThirdPersonMovement : MonoBehaviour
             Slide();
         }
 
-        Ragdoll();
+        SlowMo();
         
     }
 
@@ -147,25 +147,21 @@ public class ThirdPersonMovement : MonoBehaviour
 
 
 
-    private void Ragdoll()
+    private void SlowMo()
     {
-        //if (Input.GetKey(KeyCode.E))
-        //{
-        //    movementAnim.enabled = false;
-        //    disableMovement = true;
-        //}
 
-        //if (Input.GetKey(KeyCode.Q))
-        //{
-        //    movementAnim.enabled = true;
         //    disableMovement = false;
-        //}
+        
 
         if (Input.GetKey(KeyCode.E))
         {
-            timeManager.DoSlowMotion();
+            timeManager.DoSlowMotion();     
         }
 
+        if (Input.GetButtonDown("Press E"))
+        {
+            FindObjectOfType<AudioManager>().Play("SlowMo");
+        }
 
 
     }

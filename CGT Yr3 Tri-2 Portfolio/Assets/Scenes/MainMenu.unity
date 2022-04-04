@@ -23246,6 +23246,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: SlowMo
+    clip: {fileID: 8300000, guid: 1cad5dbed599e8b41b0f575cc2e69188, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1811030678
 Transform:
   m_ObjectHideFlags: 0

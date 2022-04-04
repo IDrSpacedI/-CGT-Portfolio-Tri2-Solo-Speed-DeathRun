@@ -8828,7 +8828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e0ed2b2234dfd48883f40585fee312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 90
+  startingTime: 40
   DeathDHUD: {fileID: 0}
   countdownText: {fileID: 871639897}
 --- !u!114 &871639897
@@ -18609,7 +18609,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959337213}
-  m_LocalRotation: {x: -0.08711855, y: 0.000000016850846, z: 0.0000000014736241, w: 0.99619794}
+  m_LocalRotation: {x: -0.08711856, y: -0.000000015994749, z: -0.0000000013987577, w: 0.99619794}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
