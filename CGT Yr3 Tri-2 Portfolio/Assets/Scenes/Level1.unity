@@ -927,7 +927,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0922909, y: 1}
+    m_SensorSize: {x: 2.0445168, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -943,7 +943,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100204752}
-  m_LocalRotation: {x: -0.08711858, y: -0.00000001955659, z: -0.0000000017102448, w: 0.99619794}
+  m_LocalRotation: {x: -0.08711857, y: -0.000000017728679, z: -0.000000001550392, w: 0.99619794}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6160,8 +6160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43.0556, y: 139.43}
-  m_SizeDelta: {x: 473.2782, y: 278.86}
+  m_AnchoredPosition: {x: 62.229164, y: 145.81778}
+  m_SizeDelta: {x: 511.6252, y: 266.0845}
   m_Pivot: {x: 0.5, y: 0.5000002}
 --- !u!114 &229251370
 MonoBehaviour:
@@ -6183,9 +6183,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Level 1
+  m_text: 'Reality 1
 
-    Ice Caven'
+    Ice Cavern'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 68a89c287d8f3214a9678f47e5fb7f23, type: 2}
   m_sharedMaterial: {fileID: -984084789861534355, guid: 68a89c287d8f3214a9678f47e5fb7f23, type: 2}
@@ -65234,7 +65234,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905921853}
-  m_LocalRotation: {x: -0.11030276, y: 0.0000000049995403, z: 3.9408615e-10, w: 0.99389803}
+  m_LocalRotation: {x: -0.11030276, y: -0.0000000049995403, z: -3.9408615e-10, w: 0.99389803}
   m_LocalPosition: {x: 10.203, y: 1.009, z: 7.6330004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -77493,7 +77493,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0922909, y: 1}
+    m_SensorSize: {x: 2.0445168, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -87485,7 +87485,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0922909, y: 1}
+    m_SensorSize: {x: 2.0445168, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -87501,7 +87501,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423030883}
-  m_LocalRotation: {x: -0.110302754, y: 0.000000004275347, z: 4.744779e-10, w: 0.99389803}
+  m_LocalRotation: {x: -0.110302754, y: -0.000000004275347, z: -4.744779e-10, w: 0.99389803}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -111704,7 +111704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingTime: 100
-  DeathDHUD: {fileID: 0}
+  DeathDHUD: {fileID: 417620369}
   countdownText: {fileID: 1748108005}
 --- !u!114 &1748108005
 MonoBehaviour:
@@ -127742,7 +127742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 2147483647
   m_IgnoreTag: Player
   m_TransparentLayers:
     serializedVersion: 2
@@ -127788,7 +127788,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0922909, y: 1}
+    m_SensorSize: {x: 2.0445168, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

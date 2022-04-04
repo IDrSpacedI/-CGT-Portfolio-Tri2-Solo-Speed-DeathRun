@@ -25,6 +25,7 @@ public class ResetPlayer : MonoBehaviour
 
         cc.enabled = false;
         thePlayer.transform.position = TeleportTarget.transform.position;
+        FindObjectOfType<AudioManager>().Play("Portal");
         StartCoroutine(portal());
         cc.enabled = true;
         

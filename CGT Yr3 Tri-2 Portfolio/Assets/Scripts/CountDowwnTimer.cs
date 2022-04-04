@@ -28,6 +28,7 @@ public class CountDowwnTimer : MonoBehaviour
         if(currentTime <= 0)
         {
             currentTime = 0;
+            Cursor.visible = true;
             DeathDHUD.SetActive(true);
         }
     }

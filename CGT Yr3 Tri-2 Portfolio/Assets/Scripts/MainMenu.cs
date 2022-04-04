@@ -38,6 +38,7 @@ public class MainMenu : MonoBehaviour
     public void Tryagain()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Cursor.visible = false;
     }
 
     public void Update()
