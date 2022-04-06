@@ -9,6 +9,11 @@ public class ResetPlayer : MonoBehaviour
     public GameObject Portal;
     public CharacterController cc;
 
+    void Start()
+    {
+        portal();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
@@ -34,7 +39,6 @@ public class ResetPlayer : MonoBehaviour
 
     IEnumerator portal()
     {
-        //FindObjectOfType<AudioManager>().Play("Portal");
         Portal.SetActive(true);
         yield return new WaitForSeconds(3f);
         Portal.SetActive(false);
