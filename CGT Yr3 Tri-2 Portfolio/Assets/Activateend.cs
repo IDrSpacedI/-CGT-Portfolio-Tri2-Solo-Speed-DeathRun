@@ -10,6 +10,8 @@ public class Activateend : MonoBehaviour
     public GameObject EndCam;
 
     public TextMeshProUGUI Pickup;
+    public TextMeshProUGUI Timerstop;
+
 
 
     bool active = true;
@@ -53,6 +55,7 @@ public class Activateend : MonoBehaviour
         {
             Pickup.gameObject.SetActive(false);
             EndCam.SetActive(true);
+            Timerstop.gameObject.SetActive(false);
             StartCoroutine(Ending());
 
         }
@@ -62,7 +65,7 @@ public class Activateend : MonoBehaviour
 
     IEnumerator Ending()
     {
-        yield return new WaitForSeconds(13f);
+        yield return new WaitForSeconds(15f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }

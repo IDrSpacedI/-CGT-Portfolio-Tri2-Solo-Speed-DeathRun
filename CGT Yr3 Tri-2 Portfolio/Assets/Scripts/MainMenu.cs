@@ -41,6 +41,13 @@ public class MainMenu : MonoBehaviour
         Cursor.visible = false;
     }
 
+    public void MainMenuback()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+
+
     public void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
