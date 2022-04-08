@@ -8,7 +8,7 @@ public class CountDowwnTimer : MonoBehaviour
 {
     float currentTime = 0f;
     public float startingTime = 100f;
-    public GameObject DeathDHUD;
+    public GameObject DeathHUD;
     public GameObject EndCam;
 
     [SerializeField] TextMeshProUGUI countdownText;
@@ -17,7 +17,7 @@ public class CountDowwnTimer : MonoBehaviour
     void Start()
     {
         currentTime = startingTime;
-        DeathDHUD.SetActive(false);
+        DeathHUD.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class CountDowwnTimer : MonoBehaviour
         {
             currentTime = 0;
             Cursor.visible = true;
-            DeathDHUD.SetActive(true);
+            DeathHUD.SetActive(true);
         }
     }
 }
