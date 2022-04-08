@@ -17375,7 +17375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -19.042, y: -2}
+  m_AnchoredPosition: {x: -19.042, y: -48}
   m_SizeDelta: {x: -1766.836, y: -836.296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1513340739
@@ -17406,6 +17406,8 @@ MonoBehaviour:
 
     Press
     E = Slow down Time (Level 2+)
+
+    ESC - Back to Main Menu
 
 
 '
@@ -23254,6 +23256,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SpeedUp
     clip: {fileID: 8300000, guid: 3eb582b7b84e6a749b06efdc006f1027, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Beam
+    clip: {fileID: 8300000, guid: a4b7197a7c811f949a03317e5bd8ffb9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: End
+    clip: {fileID: 8300000, guid: e6195bcfaa225a94c9d1384c68aa40ee, type: 3}
     volume: 1
     pitch: 1
     loop: 0

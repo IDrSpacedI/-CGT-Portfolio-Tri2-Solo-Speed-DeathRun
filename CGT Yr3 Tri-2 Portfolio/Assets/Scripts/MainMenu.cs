@@ -18,21 +18,25 @@ public class MainMenu : MonoBehaviour
     public void Level1()
     {
         SceneManager.LoadScene("Level1");
+        Cursor.visible = false;
     }
 
     public void Level2()
     {
         SceneManager.LoadScene("Level 2");
+        Cursor.visible = false;
     }
 
     public void Level3()
     {
         SceneManager.LoadScene("Level 3");
+        Cursor.visible = false;
     }
 
     public void Level4()
     {
         SceneManager.LoadScene("Level 4");
+        Cursor.visible = false;
     }
 
     public void Tryagain()
@@ -44,6 +48,7 @@ public class MainMenu : MonoBehaviour
     public void MainMenuback()
     {
         SceneManager.LoadScene("MainMenu");
+        Cursor.visible = false;
     }
 
 
@@ -53,6 +58,8 @@ public class MainMenu : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("MainMenu");
+            Cursor.visible = true;
+
         }
     }
 

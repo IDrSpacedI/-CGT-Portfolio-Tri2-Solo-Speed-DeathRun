@@ -10,7 +10,7 @@ public class Activateend : MonoBehaviour
     public GameObject EndCam;
 
     public TextMeshProUGUI Pickup;
-    public TextMeshProUGUI Timerstop;
+    public GameObject HUD;
 
 
 
@@ -55,12 +55,19 @@ public class Activateend : MonoBehaviour
         {
             Pickup.gameObject.SetActive(false);
             EndCam.SetActive(true);
-            Timerstop.gameObject.SetActive(false);
+            HUD.SetActive(false);
+            StartCoroutine(Beam());
             StartCoroutine(Ending());
 
         }
 
 
+    }
+
+    IEnumerator Beam()
+    {
+        yield return new WaitForSeconds(4.5f);
+        FindObjectOfType<AudioManager>().Play("Beam");
     }
 
     IEnumerator Ending()

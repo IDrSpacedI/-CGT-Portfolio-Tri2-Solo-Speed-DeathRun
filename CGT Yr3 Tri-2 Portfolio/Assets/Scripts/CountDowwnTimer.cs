@@ -9,6 +9,7 @@ public class CountDowwnTimer : MonoBehaviour
     float currentTime = 0f;
     public float startingTime = 100f;
     public GameObject DeathDHUD;
+    public GameObject EndCam;
 
     [SerializeField] TextMeshProUGUI countdownText;
 
