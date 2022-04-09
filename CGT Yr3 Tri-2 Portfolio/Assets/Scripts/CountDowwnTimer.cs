@@ -29,6 +29,7 @@ public class CountDowwnTimer : MonoBehaviour
         if(currentTime <= 0)
         {
             currentTime = 0;
+            Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
             DeathHUD.SetActive(true);
         }
