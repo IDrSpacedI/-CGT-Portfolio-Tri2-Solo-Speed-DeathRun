@@ -26,6 +26,7 @@ public class CountDowwnTimer : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0.0" + "Sec");
 
+        //when timer hits 0 activate death screen
         if(currentTime <= 0)
         {
             currentTime = 0;

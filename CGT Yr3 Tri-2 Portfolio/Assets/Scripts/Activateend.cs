@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Activateend : MonoBehaviour
 {
-
+    //public varibles
     public GameObject EndCam;
 
     public TextMeshProUGUI Pickup;
@@ -18,7 +18,7 @@ public class Activateend : MonoBehaviour
     bool action = false;
 
 
-    // Start is called before the first frame update
+    // sets UI at start to not active
     void Start()
     {
         Pickup.gameObject.SetActive(false);
@@ -26,7 +26,7 @@ public class Activateend : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        //when player enters collider sets UI elents to active
+        //when player enters collider sets UI elements to active
         if (active == true)
         {
             Pickup.gameObject.SetActive(true);
@@ -50,7 +50,7 @@ public class Activateend : MonoBehaviour
 
     void Update()
     {
-        //Pickup of key and letter activate gate and remove key and letter
+        //press f to interact with staff at end / activate HUD elements
         if (Input.GetKeyDown(KeyCode.F) && active == true && action == true)
         {
             Pickup.gameObject.SetActive(false);
@@ -64,12 +64,15 @@ public class Activateend : MonoBehaviour
 
     }
 
+    // activates particle effect after 4secs
     IEnumerator Beam()
     {
         yield return new WaitForSeconds(4.5f);
         FindObjectOfType<AudioManager>().Play("Beam");
     }
 
+
+    //swaps scenes after 15sec
     IEnumerator Ending()
     {
         yield return new WaitForSeconds(15f);

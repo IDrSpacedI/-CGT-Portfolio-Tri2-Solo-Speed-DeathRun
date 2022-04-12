@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CompleteLevel : MonoBehaviour
 {
+    //when player walks into portal swap to next scene
     void OnTriggerEnter(Collider other)
     {
         FindObjectOfType<AudioManager>().Play("Portal");

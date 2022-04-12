@@ -151,8 +151,6 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void SlowMo()
     {
-
-        //    disableMovement = false;
         
 
         if (Input.GetKey(KeyCode.E))
