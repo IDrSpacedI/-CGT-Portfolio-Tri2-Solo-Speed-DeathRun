@@ -5,6 +5,7 @@ using TMPro;
 
 public class EnableSlowDownTime : MonoBehaviour
 {
+    //varibles
     public GameObject Sign;
     public GameObject VoidEnergy;
     public GameObject TimeManager;
@@ -17,7 +18,7 @@ public class EnableSlowDownTime : MonoBehaviour
     bool action = false;
 
 
-    // Start is called before the first frame update
+    //sets gameobjects to false at start
     void Start()
     {
         Sign.SetActive(false);
@@ -52,7 +53,7 @@ public class EnableSlowDownTime : MonoBehaviour
 
     void Update()
     {
-        //Pickup of key and letter activate gate and remove key and letter
+        //activates glow material when player picks up void energy
         if (Input.GetKeyDown(KeyCode.F) && active == true && action == true)
         {
             Pickup.gameObject.SetActive(false);

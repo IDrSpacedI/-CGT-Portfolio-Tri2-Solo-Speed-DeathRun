@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CountDowwnTimer : MonoBehaviour
 {
+    //varibles
     float currentTime = 0f;
     public float startingTime = 100f;
     public GameObject DeathHUD;
@@ -13,7 +14,7 @@ public class CountDowwnTimer : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI countdownText;
 
-    // Start is called before the first frame update
+    //sets current time to strating time and deactivates death screen
     void Start()
     {
         currentTime = startingTime;

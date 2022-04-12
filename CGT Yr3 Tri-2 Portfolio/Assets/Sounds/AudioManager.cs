@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    //creates array and sets 1 instance of it
     public Sound[] sounds;
 
     public static AudioManager instance;
 
-    // Start is called before the first frame update
+   
+    //sets audio clip varibles 
     void Awake()
     {
         if (instance == null)
@@ -31,11 +33,14 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    //plays main theme at start
     void Start()
     {
         Play("MainTheme"); 
     }
 
+
+    //gets array of audio clips 
     public void Play (string name)
     {
         Sound s = Array.Find(sounds, Sound => Sound.name == name);

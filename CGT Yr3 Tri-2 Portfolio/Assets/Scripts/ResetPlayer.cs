@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ResetPlayer : MonoBehaviour
 {
+    //varibles
     public Transform TeleportTarget;
     public GameObject thePlayer;
     public GameObject Portal;
@@ -16,13 +17,13 @@ public class ResetPlayer : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            thePlayer.transform.position = TeleportTarget.transform.position;
-        }
+        //if (Input.GetKeyDown(KeyCode.Z))
+        //{
+        //    thePlayer.transform.position = TeleportTarget.transform.position;
+        //}
     }
 
-
+    //resets player to reset point and plays sound
     void OnTriggerEnter(Collider other)
     {
         print("RESET");
@@ -37,6 +38,7 @@ public class ResetPlayer : MonoBehaviour
 
     }
 
+    //activates portal every reset
     IEnumerator portal()
     {
         Portal.SetActive(true);
